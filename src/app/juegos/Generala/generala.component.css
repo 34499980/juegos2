@@ -1,20 +1,37 @@
 .forma {
-    width: 5rem;  
-    height: 5rem;
-    font-size: 3rem;
-    color:white;
-    background-color: black;
-    border-radius: 1rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin:10px;
-    text-align: center;
+  width: 5rem;  
+  height: 5rem;
+  font-size: 3rem;
+  color:white;
+  background-color: black;
+  border-radius: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+  text-align: center;
+}
+.text-align-center{
+  text-align: center;
+}
+.myClass{
+  color : darkgray;
+}
+table {
+  height: 400px;
+  width: 100%;
+  border-spacing: collapse;
+}
+
+tr {
+  padding: 1;
+}
+@media screen and (max-width: 500px) {
+  table tr td:nth-child(3) {
+      display: block;
   }
-  .text-align-center{
-    text-align: center;
+  table tr td:nth-child(1), table tr td:nth-child(2) {
+      display: inline-block;
+      width: 50px;
   }
-  .myClass{
-    color : darkgray;
-  }
-  
+}
