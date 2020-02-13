@@ -65,9 +65,10 @@ export class DiezMilComponent implements OnInit {
         this.selectedCount = 0;
         for(let i=0; i<this.cantidad;i++){
           this.dados[i].selected = true;
+          this.dados[i].lanzar();
         }     
-        this.vecPuntaje =[];        
-        this.lanzar();
+        //this.vecPuntaje =[];        
+        //this.lanzar();
       }
       let vecAux: DadoComponent[] = [];
       for(let i = 0; i<this.cantidad;i++){
@@ -139,7 +140,7 @@ export class DiezMilComponent implements OnInit {
   }
   public MarcarPuntaje(){
     if((Number(this.vecUser["vec"][this.usuarioID]._puntajes[0]._valor) == 0 && this.acumulado == 750)||((Number(this.vecUser["vec"][this.usuarioID]._puntajes[0]._valor)>750))){
-       this.vecUser["vec"][this.usuarioID]._puntajes[0]._valor = String(Number(this.vecUser["vec"][this.usuarioID]._puntajes[0]._valor)+ this.acumulado)
+       this.vecUser["vec"][this.usuarioID]._puntajes[0]._valor = String(Number(this.vecUser["vec"][this.usuarioID]._puntajes[0]._valor)+ this.acumulado+this.partida)
     
       let vecPuntaje: number[] =[]
      this.acumulado = 0;
