@@ -161,7 +161,7 @@ export class DiezMilComponent implements OnInit {
     let i = 0;
    
     while(i < array.length-1){ 
-      if(array[i].valor != array[i].valor-1){
+      if(array[i].valor != array[i+1].valor-1){
         return 0
       }
     }
@@ -172,18 +172,13 @@ export class DiezMilComponent implements OnInit {
         }
     return 500;   
   }
-  public ValidarIguales(array: any[]):number{
-    let flag: boolean = false;
-    let anterior
-    let cont : number= 1
-    let cont2 : number = 0
-    let numeros: number = 0
+  public ValidarIguales(array: any[]):number{  
+    let cont : number= 0        
     let Selectvalue : number = 0;
     let value : number = 0;
     let arrayUsados: any [] = [];
     let i = 0;
-   // let i = 0
-    let siguiente : boolean = true;
+   
    
     if(array.length > 1){
     for(let i = 0; i<=array.length-2; i++){
