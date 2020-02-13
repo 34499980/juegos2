@@ -4,6 +4,7 @@ import { TATETIComponent } from './juegos/tateti/tateti.component';
 import { GENERALAComponent } from './juegos/Generala/generala.component';
 import { SelectUsersComponent } from './usuarios/select-users/select-users.component';
 import { GENERALAObligadaComponent } from './juegos/GeneralaObligada/generala.component';
+import { DiezMilComponent } from './juegos/Diezmil/DiezMil.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,11 @@ const routes: Routes = [
     data: {juego:"GENERALA"}
   },
   {
+    path: 'user-DiezMIL',
+    component: SelectUsersComponent,
+    data: {juego:"DiezMIL"}
+  },
+  {
     path: 'GENERALA',
     component: GENERALAComponent
   },  
@@ -34,6 +40,11 @@ const routes: Routes = [
   {
     path: 'TATETI',
     component: TATETIComponent
+  }
+  ,
+  {
+    path: 'DiezMIL',
+    component: DiezMilComponent
   }
  
 ];
