@@ -120,9 +120,10 @@ export class DiezMilComponent implements OnInit {
             }
           }
         }
-     }else{      
-       if(this.vecPuntaje[index].tiro == this.tiros){
-           this.vecPuntaje.splice(index,1);
+     }else{  
+      let auxIndex =  this.vecPuntaje.findIndex(x => x.ID == index)
+       if(this.vecPuntaje[auxIndex].tiro == this.tiros){
+           this.vecPuntaje.splice(auxIndex,1);
            this.dados[index].selected=true;
            this.selectedCount--
        }
@@ -182,7 +183,7 @@ export class DiezMilComponent implements OnInit {
    
     if(array.length > 1){
     for(let i = 0; i<=array.length-2; i++){
-        if(array[i].valor==array[i+1].valor && array[i].tiro== this.tiros && array[i+1].tiro == this.tiros){
+        if(array[i].valor==array[i+1].valor && array[i].tiro== this.tiros && array[i+1].tiro == this.tiros && cont != 3){
           cont++;
           Selectvalue = array[i].valor;
           arrayUsados.push(array[i].ID)
